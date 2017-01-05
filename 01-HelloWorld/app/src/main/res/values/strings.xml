@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Preguntas v1.0a</string>
+    <string name="activity_main_question_text">Prueba de texto para ver como es</string>
+    <string name="corrects">"Numero de aciertos: "</string>
+    <string name="errors">"Numero de fallos: "</string>
+    <string name="question">"Pregunta "</string>
+    <string name="q1text">¿La capital de Málaga es Cádiz?</string>
+    <string name="q2text">¿El presidente de los EEUU es Donald Trump?</string>
+    <string name="q3text">¿Estamos en 2017?</string>
+    <string name="q4text">¿El pato Donald era negro?</string>
+    <string name="q5text">¿La capital de China es Beijing?</string>
+    <string name="is_correct">Has acertado</string>
+    <string name="is_error">Has fallado</string>
+</resources>
