@@ -9,16 +9,29 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="#888"
     tools:context="com.marin.saul.a02_adventure.HelpActivity">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/help_title"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/help_title"
+        android:layout_weight="3"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/help"/>
+        android:padding="20dp"
+        android:text="@string/help"
+        android:layout_weight="1"
+        />
 
+    <Button
+        android:id="@+id/activity_help_back_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Back to adventure"
+        android:layout_weight="3"
+        />
 </LinearLayout>
