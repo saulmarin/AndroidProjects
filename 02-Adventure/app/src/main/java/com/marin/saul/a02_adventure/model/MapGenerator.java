@@ -36,6 +36,11 @@ public class MapGenerator {
         itemsRoom3.add(new Item("Llave","Quizás aun funcione...\n"));
         room3.setItems(itemsRoom3);
 
+        room1.setImage("room1");
+        room2.setImage("room2");
+        room3.setImage("room3");
+        room4.setImage("room4");
+
 
         initialRoom = room1;
 

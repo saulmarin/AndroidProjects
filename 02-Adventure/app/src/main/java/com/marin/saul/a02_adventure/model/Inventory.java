@@ -12,11 +12,12 @@ public class Inventory {
 
     }
 
-    public void print(){
-        System.out.println("------------\nMochila\n------------");
+    public String print(){
+        String result = "Inventory:\n";
         for (Item item: inventory){
-            System.out.println(item.getName()+": "+item.getDescription());
+            result = result + item.getName()+ "\n";
         }
+        return result;
     }
 
     public void add(Item item){

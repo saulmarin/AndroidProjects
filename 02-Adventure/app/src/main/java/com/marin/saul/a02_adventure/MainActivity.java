@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.marin.saul.a02_adventure.model.Inventory;
+import com.marin.saul.a02_adventure.model.InventoryManager;
 import com.marin.saul.a02_adventure.model.Item;
 import com.marin.saul.a02_adventure.model.MapGenerator;
 import com.marin.saul.a02_adventure.model.Room;
@@ -82,19 +83,19 @@ public class MainActivity extends AppCompatActivity {
         takeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                InventoryManager.take(currentRoom,inventory,"Mapa");
             }
         });
         dropButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                InventoryManager.drop(currentRoom,inventory,"Mapa");
             }
         });
         inventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                showInventory();
             }
         });
         helpButton.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void repaintScene(){
         roomDescription.setText(currentRoom.getDescription());
+        String sceneImage = currentRoom.getImage();
+        int id = getResources().getIdentifier(sceneImage, "drawable", getPackageName());
+        roomImage.setImageResource(id);
 
         if (currentRoom.getRoomNorth() != null){
             moveNorth.setVisibility(View.VISIBLE);
@@ -157,14 +161,9 @@ public class MainActivity extends AppCompatActivity {
             //no room
             moveSouth.setVisibility(View.INVISIBLE);
         }
-
-
-
-
-
-
-
-
-
+    }
+    public void showInventory() {
+        String inventoryText = inventory.print();
+        roomDescription.setText(inventoryText);
     }
 }
