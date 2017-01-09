@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Magic Dice</string>
+    <string name="roll_the_dice">Roll the DICE !!!!</string>
+    <string name="percentile_dice">PERCENTILE DICE</string>
+    <string name="normal_dice">NORMAL DICE</string>
+</resources>
